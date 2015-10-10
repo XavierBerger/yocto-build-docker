@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -xe
+
+chown -R bitbake /yocto-edison-src /bitbake/download /bitbake/sstate
+
+su - bitbake -c "cd /yocto-edison-src/out/linux64 && source poky/oe-init-build-env && bitbake edison-image"
+
+#cd /yocto-edison-src
+#source poky/oe-init-build-env
+#bitbake edison-image
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -xe
+
+cd /yocto-edison-src
+
+./meta-intel-edison/setup.sh \
+  --dl_dir=/bitbake/download --sstate_dir=/bitbake/sstate
+

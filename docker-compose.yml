@@ -1,0 +1,13 @@
+edison-src:
+  image: tianon/true
+  volumes:
+    - /yocto-edison-src
+    - /yocto-edison-build
+    - /bitbake/download
+    - /bitbake/sstate
+
+builder:
+  build: .
+  #command: /bin/build-image
+  volumes_from:
+    - edison-src

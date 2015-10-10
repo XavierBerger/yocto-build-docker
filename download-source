@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -xe
+
+# More downloads at 
+# https://software.intel.com/en-us/iot/hardware/edison/downloads
+rm -rf /yocto-edison-src/*
+
+curl http://downloadmirror.intel.com/25028/eng/edison-src-ww25.5-15.tgz \
+  | tar --strip-components=1 --show-transformed -xzvf - -C /yocto-edison-src
+
+ls /yocto-edison-src/
+
